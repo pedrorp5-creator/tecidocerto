@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tecido Certo — O Guia do Confeccionista Iniciante</title>
+<meta name="description" content="Aprenda a escolher o tecido ideal e evite prejuízo na confecção. Guia prático com 8 capítulos para confeccionistas iniciantes.">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1607722010481743');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1607722010481743&ev=PageView&noscript=1"/></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green-dark:  #1A3A2A;
+  --green-mid:   #2D6A4F;
+  --green-light: #8FBF7A;
+  --terra:       #C8613A;
+  --terra-light: #FAF0EB;
+  --bege:        #F5F0E8;
+  --bege-dark:   #EDE8DF;
+  --white:       #FFFFFF;
+  --gray:        #6B6B6B;
+  --gray-light:  #F0EDE8;
+  --dark-text:   #1A2A1E;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--white);
+  color: var(--dark-text);
+  overflow-x: hidden;
+}
+
+/* ── UTILIDADES ─────────────────────────────────────── */
+.container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+.terra { color: var(--terra); }
+.green { color: var(--green-mid); }
+.accent { color: var(--green-light); }
+
+/* ── BARRA TOPO ─────────────────────────────────────── */
+.top-bar {
+  background: var(--terra);
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.top-bar span { opacity: .8; font-weight: 400; }
+
+/* ── HERO ───────────────────────────────────────────── */
+.hero {
+  background: var(--green-dark);
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 64px;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.hero-accent {
+  position: absolute;
+  top: 0; right: 0;
+  width: 300px; height: 300px;
+  background: var(--terra);
+  opacity: .12;
+  clip-path: polygon(100% 0, 100% 100%, 20% 100%, 60% 0);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(200,97,58,.2);
+  border: 1px solid rgba(200,97,58,.4);
+  color: #F4A97A;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+.hero-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--terra);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.05;
+  color: white;
+  margin-bottom: 8px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--green-light);
+}
+
+.hero-subtitle {
+  font-size: 17px;
+  color: rgba(255,255,255,.65);
+  line-height: 1.6;
+  margin: 20px 0 32px;
+  max-width: 480px;
+}
+.hero-subtitle strong {
+  color: rgba(255,255,255,.9);
+  font-weight: 700;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--terra);
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 18px 36px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform .15s, background .15s;
+  letter-spacing: .02em;
+}
+.hero-cta:hover { background: #B8522A; transform: translateY(-2px); }
+.hero-cta-arrow { font-size: 20px; }
+
+.hero-guarantee {
+  margin-top: 16px;
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-guarantee::before {
+  content: '🔒';
+  font-size: 12px;
+}
+
+.hero-mockup {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.hero-mockup img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* ── DOR ────────────────────────────────────────────── */
+.dor {
+  background: var(--bege);
+  padding: 64px 0;
+  border-top: 4px solid var(--terra);
+}
+.dor-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.dor-intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4vw, 38px);
+  color: var(--green-dark);
+  margin-bottom: 12px;
+}
+.dor-intro p {
+  font-size: 16px;
+  color: var(--gray);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.dor-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.dor-card {
+  background: white;
+  border-left: 4px solid var(--terra);
+  border-radius: 0 8px 8px 0;
+  padding: 20px 20px 20px 20px;
+  font-size: 15px;
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+.dor-card strong { color: var(--terra); display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
+
+.dor-conclusion {
+  background: var(--green-dark);
+  border-radius: 10px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.dor-conclusion-icon {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+.dor-conclusion p {
+  color: white;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.dor-conclusion p strong { color: var(--green-light); }
+
+/* ── SOLUÇÃO ────────────────────────────────────────── */
+.solucao {
+  padding: 72px 0;
+  background: white;
+}
+.solucao .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.solucao-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  color: var(--green-dark);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.solucao-text h2 em {
+  font-style: normal;
+  color: var(--terra);
+}
+.solucao-text p {
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.solucao-list {
+  list-style: none;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.solucao-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--dark-text);
+  line-height: 1.5;
+}
+.solucao-list li::before {
+  content: '✓';
+  color: white;
+  background: var(--green-mid);
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.solucao-visual {
+  background: var(--bege);
+  border-radius: 12px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.solucao-visual::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--terra);
+}
+
+.cap-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cap-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--dark-text);
+}
+.cap-num {
+  width: 28px; height: 28px;
+  background: var(--green-dark);
+  color: var(--green-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.cap-bonus .cap-num {
+  background: var(--terra);
+  color: white;
+}
+
+/* ── PARA QUEM ──────────────────────────────────────── */
+.para-quem {
+  background: var(--green-dark);
+  padding: 64px 0;
+  position: relative;
+  overflow: hidden;
+}
+.para-quem::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.para-quem .container { position: relative; z-index: 2; }
+.para-quem h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 40px);
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.para-quem h2 em { font-style: normal; color: var(--green-light); }
+
+.perfis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.perfil {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  padding: 24px 20px;
+  text-align: center;
+}
+.perfil-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  display: block;
+}
+.perfil h3 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--green-light);
+  margin-bottom: 8px;
+}
+.perfil p {
+  font-size: 13px;
+  color: rgba(255,255,255,.6);
+  line-height: 1.6;
+}
+
+/* ── PRODUTO ────────────────────────────────────────── */
+.produto {
+  background: var(--bege);
+  padding: 72px 0;
+}
+.produto-inner {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--bege-dark);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.produto-left {
+  background: var(--green-dark);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.produto-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+.produto-left > * { position: relative; z-index: 2; }
+.produto-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 16px;
+}
+.produto-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.produto-title span { color: var(--green-light); }
+.produto-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.produto-includes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.produto-inc-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,.8);
+}
+.produto-inc-item::before {
+  content: '✓';
+  color: var(--green-light);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.produto-right {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.preco-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--gray);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.preco-valor {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  color: var(--green-dark);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.preco-valor sup {
+  font-size: 28px;
+  vertical-align: super;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+}
+.preco-desc {
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 32px;
+}
+.preco-desc strong { color: var(--terra); }
+
+.btn-comprar {
+  display: block;
+  background: var(--terra);
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 800;
+  padding: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: .02em;
+  transition: background .15s, transform .15s;
+  margin-bottom: 16px;
+}
+.btn-comprar:hover { background: #B8522A; transform: translateY(-2px); }
+
+.garantia {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gray-light);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.garantia-icon { font-size: 24px; }
+.garantia-text { font-size: 13px; color: var(--gray); line-height: 1.4; }
+.garantia-text strong { color: var(--dark-text); font-weight: 700; }
+
+.pagamentos {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray);
+}
+.pagamentos span {
+  display: inline-block;
+  background: var(--gray-light);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 2px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* ── FAQ ────────────────────────────────────────────── */
+.faq {
+  padding: 64px 0;
+  background: white;
+}
+.faq h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4vw, 36px);
+  color: var(--green-dark);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid var(--bege-dark);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.faq-item {
+  border-bottom: 1px solid var(--bege-dark);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-text);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Nunito', sans-serif;
+}
+.faq-q:hover { background: var(--gray-light); }
+.faq-chevron {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--green-mid);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: transform .2s;
+}
+.faq-item.open .faq-chevron { transform: rotate(45deg); }
+.faq-a {
+  display: none;
+  padding: 0 24px 20px;
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.8;
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ── CTA FINAL ──────────────────────────────────────── */
+.cta-final {
+  background: var(--green-dark);
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-final::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.cta-final .container { position: relative; z-index: 2; }
+.cta-final h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 48px);
+  color: white;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+.cta-final h2 em { font-style: normal; color: var(--green-light); }
+.cta-final p {
+  font-size: 17px;
+  color: rgba(255,255,255,.6);
+  margin-bottom: 40px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+.cta-final-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--terra);
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 22px 48px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background .15s, transform .15s;
+  letter-spacing: .02em;
+}
+.cta-final-btn:hover { background: #B8522A; transform: translateY(-3px); }
+.cta-final-price {
+  margin-top: 16px;
+  font-size: 14px;
+  color: rgba(255,255,255,.4);
+}
+.cta-final-price strong { color: rgba(255,255,255,.8); }
+
+/* ── FOOTER ─────────────────────────────────────────── */
+footer {
+  background: #111D14;
+  padding: 28px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,.25);
+  line-height: 1.8;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero .container { grid-template-columns: 1fr; }
+  .hero-mockup { order: -1; }
+  .hero-mockup img { max-width: 200px; }
+  .solucao .container { grid-template-columns: 1fr; }
+  .produto-inner { grid-template-columns: 1fr; }
+  .produto-left { padding: 36px 28px; }
+  .produto-right { padding: 36px 28px; }
+}
+
+/* ── ANIMAÇÕES DE ENTRADA ───────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- BARRA TOPO -->
+<div class="top-bar">
+  🔥 Oferta especial de lançamento &nbsp;<span>Acesso imediato após a compra</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-accent"></div>
+  <div class="container">
+    <div class="hero-content fade-in">
+      <div class="hero-badge">Guia Prático Completo</div>
+      <h1>Tecido<br><em>Certo</em></h1>
+      <p class="hero-subtitle">
+        Como escolher o tecido ideal e <strong>evitar prejuízo na confecção.</strong><br>
+        O guia prático para confeccionistas iniciantes que querem produzir com qualidade desde a primeira compra.
+      </p>
+      <a href="https://pay.kiwify.com.br/vnYmlGR" class="hero-cta" onclick="fbq('track','InitiateCheckout')">
+        Quero o guia agora
+        <span class="hero-cta-arrow">→</span>
+      </a>
+      <p class="hero-guarantee">Pagamento 100% seguro · Acesso imediato</p>
+    </div>
+    <div class="hero-mockup fade-in" style="animation-delay:.2s">
+      <img src="capa_tecido_certo_v3.png" alt="Tecido Certo — O Guia do Confeccionista Iniciante">
+    </div>
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="dor">
+  <div class="container">
+    <div class="dor-intro fade-in">
+      <h2>Você já passou por alguma dessas situações?</h2>
+      <p>Se a resposta for sim para qualquer uma delas, o problema provavelmente não foi a modelagem nem a costura.</p>
+    </div>
+    <div class="dor-cards fade-in">
+      <div class="dor-card">
+        <strong>❌ Prejuízo na produção</strong>
+        Comprou tecido achando que era o certo… e quando chegou na confecção o resultado não foi o esperado.
+      </div>
+      <div class="dor-card">
+        <strong>❌ Cliente insatisfeito</strong>
+        O cliente reclamou do caimento, do conforto ou a peça perdeu a forma depois de poucas lavagens.
+      </div>
+      <div class="dor-card">
+        <strong>❌ Preço baixo demais</strong>
+        Precisou baixar o preço para conseguir vender porque a peça não transmitia a qualidade esperada.
+      </div>
+      <div class="dor-card">
+        <strong>❌ Compra no olho</strong>
+        Compra tecido sem saber a composição, a gramatura ou se serve para o segmento que trabalha.
+      </div>
+    </div>
+    <div class="dor-conclusion fade-in">
+      <div class="dor-conclusion-icon">💡</div>
+      <p>
+        Isso acontece porque <strong>nenhum fornecedor te ensina a escolher</strong> — eles só querem vender metro. Este guia é o que deveria ter chegado antes da sua primeira compra.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section class="solucao">
+  <div class="container">
+    <div class="solucao-text fade-in">
+      <h2>O guia que vai te fazer <em>comprar diferente</em> a partir de agora</h2>
+      <p>8 capítulos práticos que cobrem tudo que você precisa saber para escolher o tecido certo para cada tipo de peça — sem depender do que o vendedor te indica.</p>
+      <ul class="solucao-list">
+        <li>Identifique os grupos de tecidos e fibras sem confusão</li>
+        <li>Saiba exatamente qual tecido usar para fitness, praia, íntima e casual</li>
+        <li>Leia a etiqueta de composição como especialista</li>
+        <li>Evite os 7 erros que mais geram devolução e prejuízo</li>
+        <li>Negocie melhor com seu fornecedor e pague menos</li>
+        <li>Produza peças que o cliente quer comprar de novo</li>
+      </ul>
+    </div>
+    <div class="solucao-visual fade-in">
+      <div class="cap-list">
+        <div class="cap-item"><div class="cap-num">1</div> Os Grupos de Tecidos e Fibras</div>
+        <div class="cap-item"><div class="cap-num">2</div> Moda Fitness — qual tecido aguenta</div>
+        <div class="cap-item"><div class="cap-num">3</div> Moda Praia — cor que não desbota</div>
+        <div class="cap-item"><div class="cap-num">4</div> Moda Íntima — conforto é essencial</div>
+        <div class="cap-item"><div class="cap-num">5</div> Moda Casual — vende o ano todo</div>
+        <div class="cap-item"><div class="cap-num">6</div> Como ler a etiqueta e composição</div>
+        <div class="cap-item"><div class="cap-num">7</div> Os 7 erros mais comuns na compra</div>
+        <div class="cap-item"><div class="cap-num">8</div> Como negociar com fornecedor</div>
+        <div class="cap-item cap-bonus"><div class="cap-num">+</div> Bônus: tabela tecido × segmento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="para-quem">
+  <div class="container">
+    <h2>Este guia é para <em>você</em> se…</h2>
+    <div class="perfis fade-in">
+      <div class="perfil">
+        <span class="perfil-icon">🧵</span>
+        <h3>Está começando na confecção</h3>
+        <p>Quer aprender do zero sem errar nas primeiras compras de tecido</p>
+      </div>
+      <div class="perfil">
+        <span class="perfil-icon">💼</span>
+        <h3>Pensa em abrir seu negócio</h3>
+        <p>Está planejando montar uma confecção e quer começar com base sólida</p>
+      </div>
+      <div class="perfil">
+        <span class="perfil-icon">📦</span>
+        <h3>Já confecciona mas tem dúvidas</h3>
+        <p>Produz há algum tempo mas ainda erra na escolha do tecido certo</p>
+      </div>
+      <div class="perfil">
+        <span class="perfil-icon">💰</span>
+        <h3>Quer parar de desperdiçar dinheiro</h3>
+        <p>Cansada de comprar tecido errado e ter prejuízo na produção</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTO / PREÇO -->
+<section class="produto">
+  <div class="container">
+    <div class="produto-inner fade-in">
+      <div class="produto-left">
+        <p class="produto-label">O que você recebe</p>
+        <h2 class="produto-title">Tecido <span>Certo</span></h2>
+        <p class="produto-sub">O Guia do Confeccionista Iniciante</p>
+        <div class="produto-includes">
+          <div class="produto-inc-item">8 capítulos completos em PDF</div>
+          <div class="produto-inc-item">Tabela bônus: tecido × segmento</div>
+          <div class="produto-inc-item">Checklists para usar na compra</div>
+          <div class="produto-inc-item">Guia de composição e etiqueta</div>
+          <div class="produto-inc-item">Scripts de negociação com fornecedor</div>
+          <div class="produto-inc-item">Acesso imediato e vitalício</div>
+        </div>
+      </div>
+      <div class="produto-right">
+        <p class="preco-label">Investimento</p>
+        <div class="preco-valor"><sup>R$</sup>19<span style="font-size:32px;vertical-align:middle">,90</span></div>
+        <p class="preco-desc">Pagamento único · <strong>Acesso imediato</strong></p>
+        <a href="https://pay.kiwify.com.br/vnYmlGR" class="btn-comprar" onclick="fbq('track','AddToCart')">
+          Quero o guia agora →
+        </a>
+        <div class="garantia">
+          <span class="garantia-icon">🛡️</span>
+          <p class="garantia-text"><strong>Garantia de 7 dias.</strong> Se não gostar, devolvemos 100% do valor sem perguntas.</p>
+        </div>
+        <div class="pagamentos">
+          Pagamento seguro via
+          <span>Cartão</span>
+          <span>Pix</span>
+          <span>Boleto</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <h2>Dúvidas frequentes</h2>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Como recebo o guia após a compra?
+          <span class="faq-chevron">+</span>
+        </button>
+        <p class="faq-a">Imediatamente após a confirmação do pagamento você recebe um e-mail com o link de acesso. O guia fica disponível para download na sua área de membros.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Precisa ter experiência em confecção para aproveitar?
+          <span class="faq-chevron">+</span>
+        </button>
+        <p class="faq-a">Não. O guia foi feito especialmente para quem está começando ou pensando em começar. A linguagem é simples, direta e sem termos técnicos desnecessários.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Serve para quem trabalha com qual segmento?
+          <span class="faq-chevron">+</span>
+        </button>
+        <p class="faq-a">O guia cobre os quatro segmentos principais: moda fitness, moda praia, moda íntima e moda casual. Tem capítulo dedicado para cada um.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Posso acessar pelo celular?
+          <span class="faq-chevron">+</span>
+        </button>
+        <p class="faq-a">Sim. O guia é um PDF otimizado para leitura no celular. Você pode baixar e guardar no seu dispositivo para consultar mesmo sem internet.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          E se eu não gostar?
+          <span class="faq-chevron">+</span>
+        </button>
+        <p class="faq-a">Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeita, é só pedir o reembolso e devolvemos 100% do valor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container">
+    <h2 class="fade-in">Escolha melhor.<br><em>Produza com qualidade.</em><br>Venda mais.</h2>
+    <p class="fade-in">Desde a primeira compra de tecido.</p>
+    <a href="https://pay.kiwify.com.br/vnYmlGR" class="cta-final-btn fade-in" onclick="fbq('track','InitiateCheckout')">
+      Quero o Tecido Certo agora →
+    </a>
+    <p class="cta-final-price">Por apenas <strong>R$ 19,90</strong> · Acesso imediato · Garantia de 7 dias</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Tecido Certo. Todos os direitos reservados.</p>
+  <p>Este produto é um guia digital em PDF. Após a compra o acesso é liberado imediatamente por e-mail.</p>
+</footer>
+
+<script>
+// FAQ toggle
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  item.classList.toggle('open');
+}
+
+// Fade in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
